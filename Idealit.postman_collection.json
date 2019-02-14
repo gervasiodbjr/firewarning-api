@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "4c32a247-305e-41a8-90f8-ac12edabde03",
+		"name": "Idealit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"admin@desafio.com.br\",\n\t\"password\": \"senha123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwODg3NX0.kry-VMz0qeZZQCLrgsQyyYTLvIJ9AV8ixMOfu6Un7zv8PE2uXavl-eYlZy__wxifpNF4s5WoPuo1Mi894b_XfA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users [POST]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwNDQ4Nn0.LiTZb5U-h6Qu0q5H9PMYtfNV44HKRgxU9T3u7zrCUuLqCVRGaabE7u4x-7l8OKhUrLHFW6MGsHIDZpXmQOJmZA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Gervásio 3\",\n\t\"email\": \"gervasio@teste.com\",\n\t\"tipo\": \"ADMIN\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "websframe/boletopdf",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1NTAwMDI3NjN9.eiSay_-bWmpg8AtuEl26wSz2Qc2CdObuMfGM5sTK1nY",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://www2.dev1.com.br:9000/websframe/faturapdf/246044",
+					"protocol": "http",
+					"host": [
+						"www2",
+						"dev1",
+						"com",
+						"br"
+					],
+					"port": "9000",
+					"path": [
+						"websframe",
+						"faturapdf",
+						"246044"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1NDk4OTM2NzB9.2e_B2B0nv_qXGaRdVQBvEqpUxqhqF9lDNbQdzpki024",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users [PUT]",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwNDQ4Nn0.LiTZb5U-h6Qu0q5H9PMYtfNV44HKRgxU9T3u7zrCUuLqCVRGaabE7u4x-7l8OKhUrLHFW6MGsHIDZpXmQOJmZA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Gervásio\",\n\t\"email\": \"gervasio@teste.com.br\",\n\t\"tipo\": \"ADMIN\",\n\t\"empresa\": \"03373373371264\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/users/6",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users [DELETE]",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwNDQ4Nn0.LiTZb5U-h6Qu0q5H9PMYtfNV44HKRgxU9T3u7zrCUuLqCVRGaabE7u4x-7l8OKhUrLHFW6MGsHIDZpXmQOJmZA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/users/6",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empresas [GET]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsInJvbGUiOlsiQURNSU4iXSwiZXhwIjoyNTUwMTQ5ODM5fQ.Mf2KhYhvWsbt7ZrmTw1Kh_Relny7mGdD9sS8dgocP51_p2Qkq9DZrtgJEPo7ujQ9_2E07CClUq96kAuYjwtprQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/empresas/",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"empresas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empresas [POST]",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwNDQ4Nn0.LiTZb5U-h6Qu0q5H9PMYtfNV44HKRgxU9T3u7zrCUuLqCVRGaabE7u4x-7l8OKhUrLHFW6MGsHIDZpXmQOJmZA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cnpj\": \"99988877765441\",\n\t\"fantasia\": \"Ceará Gás Norte\",\n\t\"contato\": \"999110011\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/empresas/",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"empresas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empresas [PUT]",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwNDQ4Nn0.LiTZb5U-h6Qu0q5H9PMYtfNV44HKRgxU9T3u7zrCUuLqCVRGaabE7u4x-7l8OKhUrLHFW6MGsHIDZpXmQOJmZA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fantasia\": \"Shell Brasil\",\n\t\"contato\": \"8532640001\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/empresas/03373373371268",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"empresas",
+						"03373373371268"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empresas/{cnpj} [POST] (Incidente Include)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwNDQ4Nn0.LiTZb5U-h6Qu0q5H9PMYtfNV44HKRgxU9T3u7zrCUuLqCVRGaabE7u4x-7l8OKhUrLHFW6MGsHIDZpXmQOJmZA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nivelPerigo\" : \"DANGER\",\n\t\"comentario\" : \"Explosão de caldeira no setor 1\",\n\t\"data\" : \"2019/02/05 00:15:30\",\n\t\"status\" : \"Em aberto\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/empresas/03373373371268",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"empresas",
+						"03373373371268"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empresas/{cnpj} [PUT] (Incidentes Update) ",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwNDQ4Nn0.LiTZb5U-h6Qu0q5H9PMYtfNV44HKRgxU9T3u7zrCUuLqCVRGaabE7u4x-7l8OKhUrLHFW6MGsHIDZpXmQOJmZA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idAlerta\" : 1,\n\t\"nivelPerigo\" : \"DANGER\",\n\t\"comentario\" : \"Explosão de caldeira no setor 2\",\n\t\"data\" : \"2019/02/05 00:15:30\",\n\t\"status\" : \"RESOLVIDO\",\n\t\"dataResolucao\": \"2019/02/13 09:20:00\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/empresas/03373373371264",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"empresas",
+						"03373373371264"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empresas/{cnpj} [DELETE]",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Idealit eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBkZXNhZmlvLmNvbS5iciIsImV4cCI6MTU1MDkwNDQ4Nn0.LiTZb5U-h6Qu0q5H9PMYtfNV44HKRgxU9T3u7zrCUuLqCVRGaabE7u4x-7l8OKhUrLHFW6MGsHIDZpXmQOJmZA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/empresas/03373373371264",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"empresas",
+						"03373373371264"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
